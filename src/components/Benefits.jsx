@@ -16,7 +16,7 @@ export default function Benefits() {
   return (
     <section id="benefits">
       <div className="container" style={{ textAlign: 'center' }}>
-        <h2 className="serif-heading">Why Choose Hairoca Hair Oil..?</h2>
+        <h2 className="serif-heading">Why Choose Hairoca Hair Oil...?</h2>
         <div className="benefits-grid">
           {benefitsList.map((item, i) => (
             <div className="benefit-card" key={i}>
