@@ -12,8 +12,8 @@ export default function Hero() {
         <h1>Bring Back Your Hair’s<br />Natural Strength & Shine</h1>
       </div>
       <div className="hero-bottom container">
-        <p>100% Herbal Hair Oil to Control Hair Fall, Boost Growth & Prevent Premature Graying</p>
-        <div className="trust-line">Made with Brahmi, Amla, Aloe Vera & 10+ Herbal Ingredients</div>
+        <p>100% Herbal Hair Oil to Control Hair Fall, <br /> Boost Growth & Prevent Premature Graying</p>
+        <div className="trust-line">Made with Brahmi, Amla, Aloe Vera & <br />10+ Herbal Ingredients</div>
       </div>
     </section>
   );

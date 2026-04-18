@@ -1,9 +1,29 @@
+import React, { useState, useEffect, useRef } from 'react';
+
 export default function Problems() {
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setIsVisible(entries[0].isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="problems" className="problem-section">
       <div className="container">
-        <h2 className="serif-heading" style={{ textAlign: 'center', marginBottom: '5rem' }}>Struggling with Hair Problems?</h2>
-        
+        <h2 className="serif-heading" style={{ textAlign: 'center', marginBottom: '3rem' }}>Struggling with Hair Problems?</h2>
+
         <div className="problem-visual-grid">
           <div className="problem-col">
             <div className="problem-card-v2">
@@ -19,7 +39,7 @@ export default function Problems() {
               <p>Premature greying?</p>
             </div>
           </div>
-          
+
           <div className="problem-col column-offset">
             <div className="problem-card-v2">
               <div className="problem-img-wrapper">
@@ -36,10 +56,16 @@ export default function Problems() {
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '6rem' }}>
-          <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#2E7D32', fontFamily: "'Cormorant Garamond'" }}>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <div style={{ fontSize: 'clamp(1rem, 5vw, 1.8rem)', fontWeight: 700, color: '#2E7D32', fontFamily: "'Cormorant Garamond'", whiteSpace: 'nowrap' }}>
             It’s time to switch to natural care.
           </div>
+          <img 
+            ref={imgRef}
+            src="/Hairocaproductimage.avif" 
+            alt="Hairoca Product" 
+            className={`mobile-only-img ${isVisible ? 'slide-in-right' : ''}`} 
+          />
         </div>
       </div>
     </section>

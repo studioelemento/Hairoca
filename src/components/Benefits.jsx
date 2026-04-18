@@ -19,13 +19,13 @@ export default function Benefits() {
         <h2 className="serif-heading">Why Choose Hairoca Hair Oil...?</h2>
         <div className="benefits-grid">
           {benefitsList.map((item, i) => (
-            <div className="benefit-card" key={i}>
-              <div className="benefit-img-wrapper">
+            <div className="benefit-card" key={i} style={{ marginBottom: '1rem' }}>
+              <div className="benefit-img-wrapper" style={{ marginBottom: '-15px' }}>
                 <img src={item.image} alt={item.text} />
               </div>
               <div className="benefit-caption">
                 <span className="benefit-pill">✔</span>
-                <p>{item.text}</p>
+                <p style={{ marginTop: '1px', marginBottom: '0' }}>{item.text}</p>
               </div>
             </div>
           ))}
