@@ -356,7 +356,7 @@ h2.serif-heading {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: var(--text-heading);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .problem-card-v2:hover .problem-img-wrapper {
