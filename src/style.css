@@ -743,9 +743,9 @@ h2.serif-heading {
   }
 
   h2.serif-heading {
-    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    font-size: clamp(1rem, 6.5vw, 1.6rem);
+    white-space: nowrap;
     margin-bottom: 1.5rem !important;
-    line-height: 1.3;
   }
 
   .problem-item {
@@ -765,12 +765,16 @@ h2.serif-heading {
     flex: 0 0 100%;
   }
 
-  /* Ingredients 2-col mobile view */
+  /* Ingredients single-line mobile header */
   #ingredients h2.serif-heading {
     white-space: nowrap;
-    font-size: clamp(0.9rem, 4.5vw, 1.4rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    letter-spacing: -0.5px;
+    font-size: min(1.8rem, calc((100vw - 1rem) / 16.5)); /* Mathematically perfectly fits 36 characters */
   }
 
+  /* Ingredients 2-col mobile view */
   .ingredients-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem;
