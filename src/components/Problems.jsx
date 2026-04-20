@@ -57,9 +57,9 @@ export default function Problems() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <div style={{ fontSize: 'clamp(1.7rem, 5vw, 2rem)', fontWeight: 700, color: '#2E7D32', fontFamily: "'Cormorant Garamond'", lineHeight: 1.2 }}>
+          <h2 className="serif-heading" style={{ color: '#2E7D32', marginBottom: '1.5rem', lineHeight: 1.2 }}>
             It’s time to switch to natural care.
-          </div>
+          </h2>
           <img 
             ref={imgRef}
             src="/Hairocaproductimage.avif" 
