@@ -57,7 +57,7 @@ export default function Problems() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <div style={{ fontSize: 'clamp(1rem, 5vw, 1.8rem)', fontWeight: 700, color: '#2E7D32', fontFamily: "'Cormorant Garamond'", whiteSpace: 'nowrap' }}>
+          <div style={{ fontSize: 'clamp(1.7rem, 5vw, 2rem)', fontWeight: 700, color: '#2E7D32', fontFamily: "'Cormorant Garamond'", lineHeight: 1.2 }}>
             It’s time to switch to natural care.
           </div>
           <img 
